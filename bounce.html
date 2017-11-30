@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>bouncing animation</title>
+    <style>
+      .bounce_hold{
+        width:75px;
+        height:50px;
+      }
+      .bounce{
+        background-color: #f15d5e;
+        width:10px;
+        height: 10px;
+        margin:2px;
+        margin-top:25px;
+        border-radius: 100%;
+        float:left;
+      }
+      .bounce1{
+        animation: bouncer 1.2s 0s infinite;
+        -webkit-animation: bouncer 1.2s 0s infinite;
+      }
+      .bounce2{
+        animation: bouncer 1.2s 0.1s infinite;
+        -webkit-animation: bouncer 1.2s 0.1s infinite;
+      }
+      .bounce3{
+        animation: bouncer 1.2s 0.2s infinite;
+        -webkit-animation: bouncer 1.2s 0.2s infinite;
+      }
+      .bounce4{
+        animation: bouncer 1.2s 0.3s infinite;
+        -webkit-animation: bouncer 1.2s 0.3s infinite;
+      }
+      .bounce5{
+        animation: bouncer 1.2s 0.4s infinite;
+        -webkit-animation: bouncer 1.2s 0.4s infinite;
+      }
+      @keyframes bouncer {
+          0% 100%{
+            transform: translateY(0px);
+          }
+          60%{
+            transform: translateY(10px);
+          }
+          20%{
+            transform: translateY(-40px);
+          }
+      }
+      @-webkit-keyframes bouncer {
+          0% 100%{
+            -webkit-transform: translateX(0px);
+          }
+          60%{
+            -webkit-transform: translateY(10px);
+          }
+          20%{
+            -webkit-transform: translateY(-40px);
+          }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="bounce_hold">
+      <div class="bounce bounce1"></div>
+      <div class="bounce bounce2"></div>
+      <div class="bounce bounce3"></div>
+      <div class="bounce bounce4"></div>
+      <div class="bounce bounce5"></div>
+    </div>
+
+  </body>
+</html>

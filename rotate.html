@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>rotate animation</title>
+    <style>
+      .rotate{
+        width:40px;
+        height: 40px;
+        position: relative;
+        background-color: #f15d5e;
+        animation: rotate_anim 1s infinite ease-in-out;
+        -webkit-animation: rotate_anim 1s infinite ease-in-out;
+      }
+      @keyframes rotate_anim{
+        0% 100%{
+          transform: scale(1);
+        }
+        15%{
+          transform: scale(1.1) rotate(10deg);
+        }
+        30%{
+          transform: rotate(60deg);
+        }
+        60%{
+          border-radius: 100%;
+          transform: scale(0.80);
+        }
+      }
+      @-webkit-keyframes rotate_anim{
+        0% 100%{
+          -webkit-transform: scale(1);
+        }
+        15%{
+          -webkit-transform: scale(1.1) rotate(10deg);
+        }
+        30%{
+          -webkit-transform: rotate(60deg);
+        }
+        60%{
+          border-radius: 100%;
+          -webkit-transform: scale(0.80);
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="rotate"></div>
+
+  </body>
+</html>

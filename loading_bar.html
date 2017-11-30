@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>loading-bar animation</title>
+    <style>
+      .loading_hold{
+        width:77px;
+        height: 20px;
+        display: inline-block;
+        margin: auto;
+      }
+      .loading{
+        width: 10px;
+        height: 10px;
+        margin: 2.5px;
+        float:left;
+        border-radius: 100%;
+        background-color: #f15d5e;
+        animation: loading_anim 1.5s infinite ease-in-out;
+        -webkit-animation: loading_anim 1.5s infinite ease-in-out;
+      }
+      .load2{
+        animation-delay: .2s;
+        -webkit-animation-delay: .2s;
+      }
+      .load3{
+        animation-delay: .4s;
+        -webkit-animation-delay: .4s;
+      }
+      .load4{
+        animation-delay: .6s;
+        -webkit-animation-delay: .6s;
+      }
+      .load5{
+        animation-delay: .8s;
+        -webkit-animation-delay: .8s;
+      }
+      .load6{
+        animation-delay: 1s;
+        -webkit-animation-delay: 1s;
+      }
+      @keyframes loading_anim {
+        0%, 100%{
+          transform: scale(1);
+        }
+        10%{
+          transform: scale(1.5);
+        }
+        18%{
+          transform: scale(0.8);
+        }
+        20%{
+          transform: scale(1);
+        }
+      }
+      @-webkit-keyframes loading_anim {
+        0%, 100%{
+          -webkit-transform: scale(1);
+        }
+        10%{
+          -webkit-transform: scale(1.5);
+        }
+        18%{
+          -webkit-transform: scale(0.8);
+        }
+        20%{
+          -webkit-transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="loading_hold">
+      <div class="loading load2"></div>
+      <div class="loading load3"></div>
+      <div class="loading load4"></div>
+      <div class="loading load5"></div>
+      <div class="loading load6"></div>
+    </div>
+
+  </body>
+</html>

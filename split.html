@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>split animation</title>
+    <style>
+      .split_basic{
+        width:10px;
+        height:10px;
+        border-radius: 100%;
+        background-color: #f15d5e;
+        position: relative;
+      }
+      .split1{
+        animation: a-split1 1s infinite ease-in-out;
+        -webkit-animation: a-split1 1s infinite ease-in-out;
+        top:5px;
+      }
+      .split2{
+        animation: a-split2 1s infinite ease-in-out;
+        -webkit-animation: a-split2 1s infinite ease-in-out;
+        bottom:5px;
+      }
+      @keyframes a-split1 {
+        23%{
+          transform: translateY(-20px);
+        }
+        46%{
+          transform: translateY(-20px) scale(.1);
+        }
+        70%{
+          transform: translateY(0px) scale(1);
+        }
+        80%{
+          transform: scale(3);
+        }
+        100%{
+          transform: scale(1);
+        }
+      }
+      @keyframes a-split2 {
+        23%{
+          transform: translateY(20px);
+        }
+        46%{
+          transform: translateY(20px) scale(.1);
+        }
+        70%{
+          transform: translateY(0px) scale(1);
+        }
+        80%{
+          transform: scale(3);
+        }
+        100%{
+          transform: scale(1);
+        }
+      }
+      @-webkit-keyframes a-split1 {
+        23%{
+          -webkit-transform: translateY(-20px);
+        }
+        46%{
+          -webkit-transform: translateY(-20px) scale(.1);
+        }
+        70%{
+          -webkit-transform: translateY(0px) scale(1);
+        }
+        80%{
+          -webkit-transform: scale(3);
+        }
+        100%{
+          -webkit-transform: scale(1);
+        }
+      }
+
+      @-webkit-keyframes a-split2 {
+        23%{
+          -webkit-transform: translateY(20px);
+        }
+        46%{
+          -webkit-transform: translateY(20px) scale(.1);
+        }
+        70%{
+          -webkit-transform: translateY(0px) scale(1);
+        }
+        80%{
+          -webkit-transform: scale(3);
+        }
+        100%{
+          -webkit-transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="split_basic split1"></div>
+    <div class="split_basic split2"></div>
+
+  </body>
+</html>
